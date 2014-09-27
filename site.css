@@ -11,14 +11,24 @@ html, body {
 .important {background-color:orange;text-align:right}
 .important h1 {font-size:1.3em;margin:10px 10px}
 
+.whisper {
+	background: #F8F8F8;
+	border: 1px solid transparent;
+	border-color:rgb(238, 238, 238);
+}
 
-.sitenavbar {background: #F8F8F8;;border: 1px solid transparent;border-color:rgb(238, 238, 238);border-bottom-left-radius:4px;border-bottom-right-radius:4px}
+.sitenavbar {
+	border-bottom-left-radius:4px;
+	border-bottom-right-radius:4px
+}
+
 .nav > li > a {padding-left:0px;padding-right:0px}
 .navbar button {width:100%; margin-right:0px}
 
 .navbar-toggle {opacity:0.7; background-color:transparent}
 .navbar-toggle:hover {opacity:0.9;background-color:transparent}
 .navbar-toggle:focus {opacity:0.9;background-color:transparent}
+
 .floater {
 	padding:5px;
 	padding-left:10px;
@@ -39,13 +49,10 @@ html, body {
 .sitenavbar .navbar-nav > li {margin-right:20px;}
 
 .info {background-color:#F8F8F8; border-radius: 4px}
+
 .info p {color:grey; margin-top:20px;}
 
 #wrapper {min-height: 100%; height:auto; margin: 0 auto -75px; padding:0 0 75px;}
-
-#footer {
-  height: 40px;
-}
 
 #footer .container {}
 
