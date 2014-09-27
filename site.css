@@ -1,4 +1,9 @@
-.shouter {background-color: #E9E9E9;margin-top:10px;}
+
+html, body {
+  height: 100%;
+}
+
+.shouter {background-color: #E9E9E9;margin-top:0px;}
 .shouter h1 {font-size: 90pt;display:block}
 .shouter h2 {font-size: 20pt;margin-left:40px;display:block}
 .image {height:250px;padding-left:4px;padding-right:4px;padding-top:0px;padding-bottom:0px;border-radius:0px}
@@ -6,7 +11,7 @@
 .important {background-color:orange;text-align:right}
 .important h1 {font-size:1.3em;margin:10px 10px}
 
-.info {background-color:#F8F8F8 }
+
 .sitenavbar {background: #F8F8F8;;border: 1px solid transparent;border-color:rgb(238, 238, 238);border-bottom-left-radius:4px;border-bottom-right-radius:4px}
 .nav > li > a {padding-left:0px;padding-right:0px}
 .navbar button {width:100%; margin-right:0px}
@@ -26,9 +31,21 @@
 	background:black;height:60px;width:400px;opacity:0.70;position:relative;z-index:10;position:absolute}	
 
 .menu-item {height:50px;}
-.menu-item a {float:left;padding-top:15px;padding-bottom:15px;}
+.menu-item a {float:left;padding-top:15px;padding-bottom:15px;padding-right:15px;}
 .sitenavbar ul {margin-bottom:0px;}
 .sitenavbar .navbar-nav > li > a {color:#777;}
 .sitenavbar a {color:#777;}
 .sitenavbar .tpactive {color:rgb(40, 156, 40);}
 .sitenavbar .navbar-nav > li {margin-right:20px;}
+
+.info {background-color:#F8F8F8; border-radius: 4px}
+.info p {color:grey; margin-top:20px;}
+
+#wrapper {min-height: 100%; height:auto; margin: 0 auto -75px; padding:0 0 75px;}
+
+#footer {
+  height: 40px;
+}
+
+#footer .container {}
+
