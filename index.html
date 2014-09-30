@@ -13,7 +13,6 @@
     Psykolog Stavanger
 </title>
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <!-- Optional theme -->
@@ -22,11 +21,13 @@
 <!-- Latest compiled and minified JavaScript -->
 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
 
+<script src="routie.min.js"></script>
+
 <link rel="stylesheet" href="site.css">
 </head>
 
 <body>
-	<div id="wrapper"> 
+	<div id="wrapper" style="background-color:white"> 
 
 	  <section id="shouter" class="shouter container" style="position:relative">
 		<div class="floater">
@@ -43,47 +44,18 @@
 		</div>	
 		<div class="row whisper sitenavbar">				
 			<ul class="list-unstyled list-inline col-xs-12" style="height:50px">
-				<li class="menu-item"><a class="tpactive navbar-brand" style="padding-left:0px" href="index.html">Hjem</a></li>
-				<li class="menu-item"><a class="navbar-link"  href="about.html">Om meg</a></li>
-				<li class="menu-item"><a class="navbar-link"  href="praktisk.html">Praktisk informasjon</a></li>
+				<li class="menu-item"><a class="tpactive navbar-brand" style="padding-left:0px" href="#home">Hjem</a></li>
+				<li class="menu-item"><a class="navbar-link"           href="#about">Om meg</a></li>
+				<li class="menu-item"><a class="navbar-link"           href="#practical">Praktisk informasjon</a></li>
 			</ul>	
 			
 		</div>
 	  </section>
-		<section id="main" class="container">
-			<div class="row">
-				<div class="col-md-12 page-header">				
-					<h2>Psykolog i Stavanger</h2>
-				</div>
-				
-				<div class="col-md-6">					
-					<p class="lead">Jeg er en autorisert psykolog med mer enn 15 års erfaring fra psykoterapi og rådgivning.
-						Hovedsaklig har jeg arbeidet i voksenpsykiatrien, men jeg har også erfaring med barn,ungdom og par.
-					<p>
-						Min grunnholdning er psykodynamisk. 
-						Dette betyr at jeg prøver å se en sammenheng mellom det problemet du har, ditt liv og bakgrunn. 
-					<p>
-						Med økt forståelse og innsikt i de krefter som driver oss er det lettere å bli frigjort fra det som er destruktivt i våre liv.
-					<p>
-						Det er også viktig for meg å vektlegge det unike i hver person og så godt som mulig tilpasse min tilnærming for å imøtekomme de behov du  har.
 
-					<p> <strong> Du er velkommen til å kontakte meg for å høre om jeg kan hjelpe deg med nettopp ditt problem.</strong>
+	  </section>
+		<div id="page-content">
 
-							
-					</div>
-				
-				<div class="col-md-4 col-md-offset-2 whisper info">
-					<p>
-						Jeg holder til i et trivelig lokale i sanitetsforeningens hus på Eiganes
-					</p>
-					<div class="thumbnail">
-						<img src="images/sanitet.png">
-					</div>
-				</div>
-			</div>
-
-		</section>
-
+		</div>
 	</div> <!-- Page wrapper -->
 
 	<footer id="footer">			
@@ -95,10 +67,81 @@
 	</footer>
   
 	<script> 
-	  $(document).ready(function() {   
-	    //$("#PName").wrap("<div></div>").addClass("col-md-3").parent().addClass("row");  
-	    //$("#PTitle").wrap("<div></div>").addClass("col-lg-3").parent().addClass("row");  
+
+	  var flash = 100;
+
+	  $(document).ready(function() {
+	  		$content = $("#page-content");
+
+	  		loadPage = function(page) {
+	  				$content.fadeOut(flash, function() {
+							$("#page-content").load(page  + " #main", function() {							
+							$content.fadeIn(flash);
+						});
+					});
+	  		};
+
+	  		$('.menu-item > a').click(function(el) {
+	  			console.log("Clicked");
+	  			$('.menu-item > a').removeClass('tpactive');
+	  			console.log(el);
+	  			$(el.currentTarget).addClass('tpactive');
+	  		})
+
+			routie({
+				'home': function() {
+					loadPage("home.html");
+					
+				},
+				
+				'about': function() {
+					loadPage("about.html");
+				},
+
+				'practical': function() {
+					loadPage("praktisk.html");
+				},
+
+				'*' : function() {
+						loadPage("home.html");
+				}
+			});
+
+		});
+
+
+	  	/* var $main = $("#main"),
+	  	 
+	  	 loadPage = function(href) {
+    		$main.load(href + " #main",function() {
+    		
+    		});
+  		 };
+
+	  	$(window).on("popstate", function() {
+
+	  		 loadPage(location.href);
+  		});
+
+	    var a = $(".sitenavbar a").click(function(e) {	    
+		    var href = $(this).attr("href");
+		    history.pushState({}, '', href);
+	    	loadPage(href);
+	    	return false;
+	    })
+
 	  }); 
+
+	  function getPage()
+		{
+			var array = window.location.href.split("#");
+
+			if ( array.length == 1)
+				return "index";
+			else {
+				return array[1] + "";
+			}
+		}*/
 	  
 	</script>
 
