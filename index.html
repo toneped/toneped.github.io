@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
 <!-- Latest compiled and minified JavaScript -->
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 <script src="routie.min.js"></script>
 
@@ -33,9 +33,25 @@
 		<div class="floater">
 			<span style="color:white;font-size:1.3em;opacity:1;">Psykologspesialist Tone Pedersen.<br> Lang erfaring og praksis i Stavanger</span>
 		</div>
-		
-		<img src="images/6.jpg" class="image col-xs-12 img-thumbnail"></img>
+		<div id="jatta" class="carousel slide" data-ride="carousel">
+				 <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+ 				 </ol>
+
+			 <div class="carousel-inner">
+    			<div class="item active">
+					<img src="images/6.jpg" class="image col-xs-12 img-thumbnail"></img>
+				</div>
+
+				<div class="item">
+					<img src="images/11.jpg" class="image col-xs-12 img-thumbnail"></img>
+				</div>
+			</div>
+		</div>
 	  </section>
+
 	  <section id="menu" class="container">
 		<div class="row important">
 			<div class="important col-xs-12">
@@ -71,6 +87,8 @@
 	  var flash = 100;
 
 	  $(document).ready(function() {
+
+	  		$('.carousel').carousel()
 	  		$content = $("#page-content");
 
 	  		loadPage = function(page) {
@@ -108,40 +126,6 @@
 			});
 
 		});
-
-
-	  	/* var $main = $("#main"),
-	  	 
-	  	 loadPage = function(href) {
-    		$main.load(href + " #main",function() {
-    		
-    		});
-  		 };
-
-	  	$(window).on("popstate", function() {
-
-	  		 loadPage(location.href);
-  		});
-
-	    var a = $(".sitenavbar a").click(function(e) {	    
-		    var href = $(this).attr("href");
-		    history.pushState({}, '', href);
-	    	loadPage(href);
-	    	return false;
-	    })
-
-	  }); 
-
-	  function getPage()
-		{
-			var array = window.location.href.split("#");
-
-			if ( array.length == 1)
-				return "index";
-			else {
-				return array[1] + "";
-			}
-		}*/
 	  
 	</script>
 
