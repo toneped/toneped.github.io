@@ -1,16 +1,17 @@
 
 html, body {
   height: 100%;
+  /* 'font-family: Courier, Times, Verdana, Arial, Helvetica , sans-serif;*/
+  font-family: Arial, Helvetica , sans-serif;
 }
 
 .shouter {background-color: #E9E9E9;margin-top:0px;}
 .shouter h1 {font-size: 90pt;display:block}
 .shouter h2 {font-size: 20pt;margin-left:40px;display:block}
-#wrapper .item .image {height:250px;padding-left:4px;padding-right:4px;padding-top:0px;padding-bottom:0px;border-radius:0px}
+#carousel .item > img {height:250px;border:0px;padding-left:4px;padding-right:4px;padding-top:0px;padding-bottom:0px;border-radius:0px}
 
-.important {background-color:orange;text-align:right;
+.important {background-color:orange;text-align:right;}
 
-}
 .important h1 {font-size:1.3em;margin:10px 10px}
 
 .whisper {
@@ -32,13 +33,6 @@ html, body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
 }
 
-.nav > li > a {padding-left:0px;padding-right:0px}
-.navbar button {width:100%; margin-right:0px}
-
-.navbar-toggle {opacity:0.7; background-color:transparent}
-.navbar-toggle:hover {opacity:0.9;background-color:transparent}
-.navbar-toggle:focus {opacity:0.9;background-color:transparent}
-
 .floater {
 	padding:5px;
 	padding-left:10px;
@@ -48,10 +42,12 @@ html, body {
 	border-width:1px;
 	border-style:solid;
 	border-radius:1px;
-	background:black;height:60px;width:400px;opacity:0.70;position:relative;z-index:10;position:absolute}	
+	background:black;height:60px;width:400px;opacity:0.70;position:relative;z-index:10;position:absolute
+}	
 
-.menu-item {height:50px;}
-.menu-item a {float:left;padding-top:15px;padding-bottom:15px;padding-right:15px;}
+.menu-item { height:50px;display:block;float:left;}
+.menu-item a {display:block;padding-top:15px;padding-bottom:15px;padding-right:15px;}
+
 .sitenavbar ul {margin-bottom:0px;}
 .sitenavbar .navbar-nav > li > a {color:#777;}
 .sitenavbar a {color:#777;}
@@ -62,9 +58,7 @@ html, body {
 
 .info p {color:grey; margin-top:20px;}
 
-#wrapper {min-height: 100%; height:auto; margin: 0 auto -75px; padding:0 0 75px;}
-
-#footer .container {}
+main {min-height: 100%; height:auto; margin: 0 auto -75px; padding:0 0 75px;}
 
 .page-header {border-bottom:2px solid #eee;}
 
