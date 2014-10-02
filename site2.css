@@ -3,13 +3,14 @@ html, body {
   height: 100%;
   /* 'font-family: Courier, Times, Verdana, Arial, Helvetica , sans-serif;*/
   font-family: Arial, Helvetica , sans-serif;
+  font-size:16px;
 }
 
-.shouter {background-color: #FFB477;margin-top:0px;}
+.shouter {background-color: #FFB477;margin-top:0px;padding-left:0px;padding-right: 0px;}
 .shouter h1 {font-size: 90pt;display:block}
 .shouter h2 {font-size: 20pt;margin-left:40px;display:block}
 
-#carousel .item > img {height:250px;border:0px;padding-left:4px;padding-right:4px;padding-top:0px;padding-bottom:0px;border-radius:0px}
+#carousel .item > img {height:250px;border:0px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;border-radius:0px}
 
 .important {text-align:right; background: #ff851f; /* Old browsers */
 background: -moz-linear-gradient(top,  #ff851f 0%, #ffb477 100%); /* FF3.6+ */
@@ -21,7 +22,7 @@ background: linear-gradient(to bottom,  #ff851f 0%,#ffb477 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff851f', endColorstr='#ffb477',GradientType=0 ); /* IE6-9 */
 }
 
-.important h1 {font-size:1.3em;margin:10px 10px}
+.important h1 {font-size:1.2em;margin:10px 10px}
 
 .whisper {
 	background: #F8F8F8;
@@ -45,14 +46,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff851f', end
 .floater {
 	padding:5px;
 	padding-left:10px;
-	top:20px;
-	left:20px;
+	top:20px;	
 	border-color:black;
 	border-width:1px;
 	border-style:solid;
 	border-radius:1px;
-	background:black;height:60px;width:400px;opacity:0.70;position:relative;z-index:10;position:absolute
-}	
+	background:black;
+	height:120px;
+	width:400px;
+	opacity:0.70;	
+	z-index:10;
+	position:absolute;	
+} 
+
+.floater > span {color:white;font-size:1.5em;opacity:1;}	
 
 .menu-item { height:50px;display:block;float:left;}
 .menu-item a {display:block;padding-top:15px;padding-bottom:15px;padding-right:15px;}
@@ -70,5 +77,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff851f', end
 main {min-height: 100%; height:auto; margin: 0 auto -75px; padding:0 0 75px;}
 
 .page-header {border-bottom:2px solid #FFB41F;margin-top:20px;}
+.lead {font-size:1.2em;}
 
 footer {margin-top:15px;}
