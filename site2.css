@@ -19,7 +19,6 @@ background: -o-linear-gradient(top,  #ff851f 0%,#ffb477 100%); /* Opera 11.10+ *
 background: -ms-linear-gradient(top,  #ff851f 0%,#ffb477 100%); /* IE10+ */
 background: linear-gradient(to bottom,  #ff851f 0%,#ffb477 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff851f', endColorstr='#ffb477',GradientType=0 ); /* IE6-9 */
-
 }
 
 .important h1 {font-size:1.3em;margin:10px 10px}
@@ -70,5 +69,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff851f', end
 
 main {min-height: 100%; height:auto; margin: 0 auto -75px; padding:0 0 75px;}
 
-.page-header {border-bottom:2px solid #FFB41F;margin-top:10px;}
+.page-header {border-bottom:2px solid #FFB41F;margin-top:20px;}
 
+footer {margin-top:15px;}
