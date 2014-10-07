@@ -102,7 +102,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d60000', end
 
 .info p {color:grey; margin-top:20px;}
 
-main {min-height: 100%; height:auto; margin: 0 auto -75px; padding:0 0 75px;}
+main {min-height: 100%; height:auto; margin: 0 auto -90px; padding:0 0 75px;}
 
 .page-header {border-bottom:2px solid #FFB41F;margin-top:20px;}
 .lead {font-size:1.2em;}
