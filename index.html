@@ -5,9 +5,9 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="My Description">
-<meta name="keywords" content="My keywords">
-<meta name="author" content="Roar Sunde">
+<meta name="description" content="psykolog i stavanger">
+<meta name="keywords" content="psykolog i stavanger">
+<meta name="author" content="Tone Pedersen">
 
 <title>
     Psykolog Stavanger
@@ -28,7 +28,7 @@
 	<main> 
 	    <header class="shouter container" style="position:relative">
 			<aside class="floater hidden-xs">
-				<span style="">Psykologspesialist Tone Pedersen.<br> Lang erfaring og praksis i Stavanger</span>
+				<span style="">Psykologspesialist Tone Pedersen.<br> Lang erfaring med praksis i Stavanger</span>
 			</aside>
 
 			<aside class="floater visible-xs" style="height:50px;width:350px;top:10px">
@@ -191,7 +191,7 @@
 					</p>
 
 					<div style="margin-bottom:20px; position:relative;width:100%; height:auto;padding-bottom: 80%;">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8228.39623009932!2d5.725322!3d58.963291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xadd16f107a59a3fa!2sStavanger+Sanitetsforening!5e0!3m2!1sno!2sno!4v1412250779863"   style="width:100%;height:100%;position:absolute" frameborder="0" style="border:0"></iframe>						
+						<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8228.39623009932!2d5.725322!3d58.963291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xadd16f107a59a3fa!2sStavanger+Sanitetsforening!5e0!3m2!1sno!2sno!4v1412250779863"   style="width:100%;height:100%;position:absolute" frameborder="0" style="border:0"></iframe>						
 					</div>
 				</div>
 			</div>
@@ -257,11 +257,15 @@
   		// Hide sections
   		$("section").hide(true);
 
-  		loadPage = function(page) {
-				$("section").hide(true);  				
-  				
-						$(page).fadeIn(flash);					
-				
+  		loadPage = function(page, onload) {  			
+				$("section").hide(true);  				  				
+    			$(page).fadeIn(flash,function() {
+    				console.log("done fading in" +  onload);
+    				if ( onload != null ){
+    					console.log("done fading inasdasd");
+    					onload();	
+    				} 
+    			});									
   		};
 
   		$('.nav > li > a').click(function(el) {
@@ -279,7 +283,11 @@
 			},
 
 			'practical': function() {
-				loadPage("#praktisk");
+				console.log("practical");
+				loadPage("#praktisk", function() {
+					var val = $("#map").attr("src");
+					$("#map").attr("src", val);
+				});
 			},
 			'behandling': function() {
 				loadPage("#behandling");
