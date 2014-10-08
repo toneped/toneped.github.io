@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {color:#303030;}
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff851f', endColorstr='#ffb477',GradientType=0 ); /* IE6-9 */
 }
 
-.important h1 {font-size:1.2em;margin:10px 10px}
+.important h2 {font-size:1.2em;margin:10px 10px}
 
 .whisper {
 	background: #F8F8F8;
@@ -60,6 +60,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d60000', end
 } 
 
 .floater > span {color:white;font-size:1.5em;opacity:1;}	
+.floater > h1 {display:inline;color:white;font-size:1.5em;opacity:1;line-height: 1.4;}	
 
 
 
@@ -98,7 +99,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d60000', end
 }
 
 
-.info {background-color:#F8F8F8; border-radius: 4px;box-shadow:-1px 1px 10px 1px rgba(124, 124, 124, 0.75);margin-top:5px;}
+.info {background-color:#F8F8F8; border-radius: 4px;box-shadow:-1px 1px 10px 1px rgba(124, 124, 124, 0.75);margin-top:5px;margin-bottom:10px;padding-bottom:15px;}
 
 .info p {color:grey; margin-top:20px;}
 
