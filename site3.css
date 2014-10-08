@@ -6,6 +6,7 @@ html, body {
   font-size:16px;
 }
 
+address {font-weight: bold;margin-left:10px;}
 
 article {margin-bottom: 20px}
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {color:#303030;}
@@ -101,7 +102,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d60000', end
 
 .info {background-color:#F8F8F8; border-radius: 4px;box-shadow:-1px 1px 10px 1px rgba(124, 124, 124, 0.75);margin-top:5px;margin-bottom:10px;padding-bottom:15px;}
 
-.info p {color:grey; margin-top:20px;}
+.info h4 {color:grey; margin-top:20px;font-size: 1em}
 
 main {min-height: 100%; height:auto; margin: 0 auto -90px; padding:0 0 75px;}
 
