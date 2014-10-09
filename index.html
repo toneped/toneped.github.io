@@ -267,9 +267,9 @@
   		loadPage = function(page, onload) {  			
 				$("section").hide(true);  				  				
     			$(page).fadeIn(flash,function() {
-    				console.log("done fading in" +  onload);
+
     				if ( onload != null ){
-    					console.log("done fading inasdasd");
+
     					onload();	
     				} 
     			});									
@@ -290,7 +290,6 @@
 			},
 
 			'practical': function() {
-				console.log("practical");
 				loadPage("#praktisk", function() {
 					var val = $("#map").attr("src");
 					$("#map").attr("src", val);
